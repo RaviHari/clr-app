@@ -1,7 +1,7 @@
 apiVersion: cloudresource.keikoproj.io/v1alpha1
 kind: CloudResourceDeployment
 metadata:
-  name: cloudresourcedeployment-sample
+  name: cloudresourcedeployment-sample-1
 spec:
   cloudformation:
     # Add fields here
