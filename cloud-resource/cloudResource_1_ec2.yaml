@@ -16,7 +16,7 @@ spec:
         cfn-ctrl: "true" 
     parameters:
         AMIid: "ami-1234"
-        InstanceType: "m5.xlarge"
+        InstanceType: "m5.2xlarge"
     template: |
         ---
          AWSTemplateFormatVersion: '2010-09-09'
