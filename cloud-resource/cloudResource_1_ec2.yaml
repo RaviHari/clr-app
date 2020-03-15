@@ -1,0 +1,40 @@
+apiVersion: cloudresource.keikoproj.io/v1alpha1
+kind: CloudResourceDeployment
+metadata:
+ name: cloudresourcedeployment-sample-13
+spec:
+  cloudformation:
+    # Add fields here
+    stackname: "cfn13"
+    assumeroleprovider:
+        rolearn: "arn:aws:iam::1234:role/cfn-fa-role"
+        # acctnum: "1234"
+        # rolearn: "arn:aws:iam::1234:role/cfn-only-role"  
+        roleSessionName: "assumesession"
+        # externalId: "iksm-sbg-e2e"
+    tags:
+        cfn-ctrl: "true" 
+    parameters:
+        AMIid: "ami-1234"
+        InstanceType: "m5.xlarge"
+    template: |
+        ---
+         AWSTemplateFormatVersion: '2010-09-09'
+         Description: Dummy EC2
+         Parameters:
+           InstanceType:
+             Description: EC2 instance sizes.
+             Type: String
+             ConstraintDescription: must be a valid EC2 instance type that supports the chosen
+               AMI.
+           AMIid:
+             Type: String
+             Description: 'Use the latest HVM AMI ID from the AMI Catalog: https://console.intuit.com/console/#/amiCatalog'
+         Resources:
+           LinuxEC2Instance:
+             Type: AWS::EC2::Instance
+             Properties:
+               ImageId:
+                 Ref: AMIid
+               InstanceType:
+                 Ref: InstanceType
