@@ -1,11 +1,11 @@
 apiVersion: cloudresource.keikoproj.io/v1alpha1
 kind: CloudResourceDeployment
 metadata:
-  name: cloudresourcedeployment-sample-1
+  name: cloudresourcedeployment-sample-12
 spec:
   cloudformation:
     # Add fields here
-    stackname: "cfn12"
+    stackname: "cfn13"
     assumeroleprovider:
         rolearn: "arn:aws:iam::1234:role/cfn-fa-role"
         # acctnum: "1234"
