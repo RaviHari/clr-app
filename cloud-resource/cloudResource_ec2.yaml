@@ -15,7 +15,7 @@ spec:
     tags:
         cfn-ctrl: "true" 
     parameters:
-        AMIid: "ami-1234"
+        AMIid: "ami-0002624afe2bc9324"
         InstanceType: "m5.xlarge"
     template: |
         ---
