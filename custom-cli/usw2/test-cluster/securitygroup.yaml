@@ -3,4 +3,3 @@ parameters:
 template:
   type: file
   path: ./securitygroup-gitops.txt
-syncwave: 1
