@@ -1,0 +1,53 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Test
+Parameters:
+  VpcId:
+    Description: VPC Id
+    Type: String
+Resources:
+  ingress200:
+    Properties:
+      CidrIp: 24.103.180.194/32
+      Description: ''
+      FromPort: '443'
+      GroupId:
+        Ref: sg1
+      IpProtocol: tcp
+      ToPort: '443'
+    Type: AWS::EC2::SecurityGroupIngress
+  ingress201:
+    Properties:
+      CidrIp: 24.103.157.194/32
+      Description: ''
+      FromPort: '443'
+      GroupId:
+        Ref: sg1
+      IpProtocol: tcp
+      ToPort: '443'
+    Type: AWS::EC2::SecurityGroupIngress
+  ingress202:
+    Properties:
+      CidrIp: 24.245.192.79/32
+      Description: ''
+      FromPort: '443'
+      GroupId:
+        Ref: sg1
+      IpProtocol: tcp
+      ToPort: '443'
+    Type: AWS::EC2::SecurityGroupIngress
+  sg1:
+    Properties:
+      GroupDescription: allow access from vpc nat gateways
+      GroupName: clr-vpc-access
+      Tags:
+      - Key: clr1_sg_name
+        Value: clr-vpc-access
+      - Key: clr1_sg_id
+        Value: sg-01e135930ae280ef2
+      - Key: Name
+        Value: qbse-internal-vpc-access
+      - Key: clr:sg
+        Value: 'true'
+      VpcId:
+        Ref: VpcId
+    Type: AWS::EC2::SecurityGroup
