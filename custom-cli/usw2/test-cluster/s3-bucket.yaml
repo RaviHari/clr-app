@@ -3,6 +3,5 @@ template:
   path: "s3://clrag/usw2/s3-product.yaml"
 parameters:
   BucketName: "cloudresource-s3bucket-3"
-stackname: "cloudresource-s3-stack3"
 tags:
   manny-generated: true
