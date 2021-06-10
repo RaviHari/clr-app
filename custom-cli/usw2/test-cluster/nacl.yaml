@@ -2,5 +2,5 @@ parameters:
   VpcId: vpc-0b4dbfd4c61977271
 template:
   type: file
-  path: ./nacl-gitops.txt
+  path: ./cfn/nacl-gitops.txt
   
