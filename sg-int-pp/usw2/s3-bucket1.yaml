@@ -13,7 +13,7 @@ spec:
       acctnum: '586597078518'
       env: ppd
     parameters:
-      BucketName: test-usw2-data
+      BucketName: test-usw2-data-1
     region: us-west-2
     stackname: s3-bucket
     tags:
