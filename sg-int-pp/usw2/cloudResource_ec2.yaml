@@ -8,15 +8,12 @@ spec:
     stackname: "sg-int-cfn14"
     assumeroleprovider:
         rolearn: "arn:aws:iam::1234:role/cfn-fa-role"
-        # acctnum: "1234"
-        # rolearn: "arn:aws:iam::1234:role/cfn-only-role"  
         roleSessionName: "assumesession"
-        # externalId: "iksm-sbg-e2e"
     tags:
         cfn-ctrl: "true" 
     parameters:
         AMIid: "ami-0002624afe2bc9324"
-        InstanceType: "m5.4xlarge"
+        InstanceType: "m5.xlarge"
     template: |
         ---
          AWSTemplateFormatVersion: '2010-09-09'
