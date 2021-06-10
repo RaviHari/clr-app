@@ -1,11 +1,11 @@
 apiVersion: cloudresource.keikoproj.io/v1alpha1
 kind: CloudResourceDeployment
 metadata:
-  name: cloudresourcedeployment-sg-int-14
+  name: cloudresourcedeployment-ec2
 spec:
   cloudformation:
     # Add fields here
-    stackname: "sg-int-cfn14"
+    stackname: "cloudresource-ec2"
     assumeroleprovider:
       acctnum: '586597078518'
       env: ppd
@@ -13,7 +13,7 @@ spec:
     tags:
         cfn-ctrl: "true" 
     parameters:
-        AMIid: "ami-0002624afe2bc9324"
+        AMIid: "ami-0800fc0fa715fdcfe"
         InstanceType: "m5.xlarge"
     template: |
         ---
