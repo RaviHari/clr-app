@@ -7,8 +7,9 @@ spec:
     # Add fields here
     stackname: "sg-int-cfn14"
     assumeroleprovider:
-        rolearn: "arn:aws:iam::1234:role/cfn-fa-role"
-        roleSessionName: "assumesession"
+      acctnum: '586597078518'
+      env: ppd
+      roleSessionName: gitops-deployment
     tags:
         cfn-ctrl: "true" 
     parameters:
