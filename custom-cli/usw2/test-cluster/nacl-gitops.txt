@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Cloudresource Nacl
+Parameters:
+  VpcId:
+    Description: VPC Id
+    Type: String
+Resources:
+  NACL1:
+    Properties:
+      CidrBlock: 129.167.166.192/26
+      Egress: 'true'
+      NetworkAclId:
+        Fn::ImportValue:
+          Fn::Sub: ${VpcId}:network-acl:id
+      PortRange:
+        From: '9990'
+        To: '9996'
+      Protocol: '6'
+      RuleAction: allow
+      RuleNumber: '1050'
+    Type: AWS::EC2::NetworkAclEntry
