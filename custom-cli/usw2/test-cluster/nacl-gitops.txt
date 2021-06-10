@@ -11,7 +11,7 @@ Resources:
       Egress: 'true'
       NetworkAclId:
         Fn::ImportValue:
-          Fn::Sub: ${VpcId}:network-acl:id
+          Fn::Sub: acl-056bf86ee84b40bbc
       PortRange:
         From: '9990'
         To: '9996'
