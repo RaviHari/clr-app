@@ -1,0 +1,10 @@
+template:
+  type: s3
+  path: "https://cloudresource.s3.us-west-2.amazonaws.com/s3-product.yaml"
+parameters:
+  VpcName: "Test"
+stackname: "s3-stack1"
+tags:
+  manny-generated: true
+acctnum: "586597078518"
+env: "ppd"
