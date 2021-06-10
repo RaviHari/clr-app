@@ -1,6 +1,6 @@
 template:
   type: s3
-  path: "https://agi-intuit-public-artifacts-166747732012-us-west-2.s3.amazonaws.com/cloud-patterns/chp-vpc-custom/v0.2.3/product.yaml"
+  path: "https://cloudresource.s3.us-west-2.amazonaws.com/s3-product.yaml"
 parameters:
   VpcName: "Test"
 stackname: "s3-stack1"
