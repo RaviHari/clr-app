@@ -3,4 +3,3 @@ parameters:
 template:
   type: file
   path: ./nacl-gitops.txt
-region: us-east-2
