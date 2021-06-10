@@ -26,7 +26,7 @@ spec:
                AMI.
            AMIid:
              Type: String
-             Description: 'Use the latest HVM AMI ID from the AMI Catalog: https://console.intuit.com/console/#/amiCatalog'
+             Description: 'Use the latest HVM AMI ID from the AMI Catalog: amiCatalog'
          Resources:
            LinuxEC2Instance:
              Type: AWS::EC2::Instance
