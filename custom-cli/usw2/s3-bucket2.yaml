@@ -2,7 +2,7 @@ template:
   type: s3
   path: "s3://clrag/usw2/s3-product.yaml"
 parameters:
-  VpcName: "Test"
+  BucketName: "s3-bucket2"
 stackname: "s3-stack2"
 tags:
   manny-generated: true
