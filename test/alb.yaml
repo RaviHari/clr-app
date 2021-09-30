@@ -5,6 +5,7 @@ metadata:
   namespace: echoserver
   annotations:
     kubernetes.io/ingress.class: aws-alb
+    alb.ingress.kubernetes.io/ssl-policy: ELBSecurityPolicy-TLS
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/tags: Environment=test,Team=test
     alb.ingress.kubernetes.io/target-type: ip
